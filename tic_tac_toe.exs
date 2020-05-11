@@ -7,6 +7,7 @@ defmodule Game do
     IO.gets("Select a move (1-9): ")
     |> String.trim
     |> String.to_integer
+    |> Kernel.-(1)
   end
 
   def move(board_str, position, player) do
